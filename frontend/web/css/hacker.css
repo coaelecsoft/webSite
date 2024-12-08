@@ -1,0 +1,195 @@
+/*
+ Created on : Mar 3, 2022, 1:53:07 PM
+ Author     : PiSi
+ */
+.blur-container-1 {
+  font-size: 1rem;
+  font-family: Monospace;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  /*
+   background: url(hacker-blue.png) no-repeat; 
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center; 
+   */
+  background: radial-gradient(circle, #9c27b0 10%, transparent 10%) no-repeat border-box, radial-gradient(circle at 10% 10%, #560 3%, transparent 3%) no-repeat border-box; }
+
+.blur-container-1:before, .blur-container-1:after {
+  content: "";
+  grid-row: 2 /16;
+  grid-column: 2 / 12;
+  border-radius: 1em; }
+
+.blur-container-1:before {
+  background: inherit;
+  filter: blur(7px); }
+
+.blur-container-1:after {
+  background: rgba(233, 233, 233, 0.7);
+  border: solid 1px white;
+  box-shadow: -1px 0px 19px 2px rgba(0, 0, 0, 0.99); }
+
+.blur-container-1 > *, .blur-container-1 > * > * {
+  padding: 10px; }
+
+.blur-container-1 > .left {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  grid-row: 2 / 15;
+  grid-column: 2 / 12;
+  border-radius: 1em 1em 0 0;
+  /*
+   border-color: white;
+   border-width: 0 0 1px 0;
+   border-style: solid;
+   background: rgba(23, 23, 23, 0.7);
+   */ }
+
+.blur-container-1 > .right {
+  overflow: hidden auto;
+  scrollbar-width: thin;
+  color: limegreen;
+  border-radius: 0 0 1em 1em;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  grid-row: 8 / 16;
+  grid-column: 2 / 12; }
+
+.right > ul > li {
+  margin-left: 25px; }
+
+@media (min-width: 666px) {
+  .blur-container-1 {
+    font-size: 1.4em; }
+
+  .blur-container-1 > .left > h2 {
+    text-align: center; }
+
+  .blur-container-1:before, .blur-container-1:after {
+    grid-row: 3 /16; }
+
+  .blur-container-1 > .left {
+    border-radius: 1em 0 0 1em;
+    grid-row: 3 / 16;
+    grid-column: 2 / 7; }
+
+  .blur-container-1 > .right {
+    border-radius: 0 1em 1em 0;
+    grid-row: 3 / 16;
+    grid-column: 7 / 12; } }
+
+.anim-rotate-span {
+  animation-name: rotatespananim;
+  animation-duration: 100ms; }
+
+@keyframes rotatespananim {
+  from {
+    background: white; }
+
+  to {
+    background: transparent; } }
+
+.blur-container {
+  font-size: 1rem;
+  font-family: Monospace;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  background: url(hacker-blue.png) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.blur-container:nth-child(odd) {
+  background: url(hacker.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /*
+   */ }
+
+.blur-container:before, .blur-container:after {
+  content: "";
+  grid-row: 2 /16;
+  grid-column: 2 / 12;
+  border-radius: 1em; }
+
+.blur-container:before {
+  background: inherit;
+  filter: blur(4px); }
+
+.blur-container:after {
+  background: rgba(233, 233, 233, 0.7);
+  border: solid 1px white;
+  box-shadow: -1px 0px 19px 2px rgba(0, 0, 0, 0.99); }
+
+.blur-container > *, .blur-container > * > * {
+  padding: 10px; }
+
+.blur-container > .left {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  grid-row: 2 / 15;
+  grid-column: 2 / 12;
+  background: rgba(23, 23, 23, 0.5);
+  border-radius: 1em 1em 0 0;
+  /*
+   border-color: white;
+   border-width: 0 0 1px 0;
+   border-style: solid;
+   */ }
+
+.blur-container > .right {
+  overflow: hidden auto;
+  scrollbar-width: thin;
+  color: limegreen;
+  background: rgba(23, 23, 23, 0.7);
+  border-radius: 0 0 1em 1em;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  grid-row: 8 / 16;
+  grid-column: 2 / 12; }
+
+.right > ul > li {
+  margin-left: 25px; }
+
+@media (min-width: 666px) {
+  .blur-container {
+    font-size: 1.4em; }
+
+  .blur-container > .left > h2 {
+    text-align: center; }
+
+  .blur-container:before, .blur-container:after {
+    grid-row: 3 /16; }
+
+  .blur-container > .left {
+    border-radius: 1em 0 0 1em;
+    grid-row: 3 / 16;
+    grid-column: 2 / 12; }
+
+  .blur-container > .right {
+    border-radius: 0 1em 1em 0;
+    grid-row: 3 / 16;
+    grid-column: 7 / 12; } }
