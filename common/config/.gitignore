@@ -1,4 +1,4 @@
-!.gitignore
+#!.gitignore
 # codeception-local.php
 main-local.php
 # params-local.php
